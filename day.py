@@ -79,20 +79,40 @@
 # print(result)
 
 
-# First Non Repeating character
-# a = "swiss"
-# here w & i is not repeating but w is first non repeating character
+# # First Non Repeating character
+# # a = "swiss"
+# # here w & i is not repeating but w is first non repeating character
 
-# method 1 in-built function
+# # method 1 in-built function
 
-a = 'swiss'
-dup = ""
+# a = 'swiss'
+# dup = ""
 
-for i in a:
-    if a.count(i) == 1:
-        dup = dup + i
-        break
-print(dup)
+# for i in a:
+#     if a.count(i) == 1:
+#         dup = dup + i
+#         break
+# print(dup)
 
     
 
+# find the longest word
+# eg: Java is te powerful languages, -> language
+
+stream = 'java is powerful language'
+print(stream.split())  # used to split the word in btw space
+
+# for i in stream.split():
+#     print(i,len(i))     # used to find the length
+
+length = 0
+result = ""
+
+for i in stream.split():
+    j = len(i)
+    if j > length:
+        length =  j
+        result = i
+
+print(result)
+    
