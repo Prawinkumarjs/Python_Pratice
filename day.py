@@ -99,6 +99,8 @@
 # find the longest word
 # eg: Java is te powerful languages, -> language
 
+# method 1
+
 stream = 'java is powerful language'
 print(stream.split())  # used to split the word in btw space
 
@@ -112,7 +114,25 @@ for i in stream.split():
     j = len(i)
     if j > length:
         length =  j
-        result = i
+        result = i + result
 
 print(result)
     
+
+# method 2
+
+stream = 'Java is a power language'
+largest = currentLength = 0
+result = currentWord = ''
+for i in stream+' ':
+    if i == ' ':
+        if currentLength>largest:
+            result = currentWord
+            largest = currentLength
+        currentWord = ''
+        currentLength = 0
+    else:
+        currentLength += 1
+        currentWord += i
+print(result)
+ 
