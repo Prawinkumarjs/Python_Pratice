@@ -137,29 +137,44 @@
 # print(result)
  
 
-# count digits, alphabets, and specials characters
-# example: java@123, o/p letter-4, digit-3,special-1
+# # count digits, alphabets, and specials characters
+# # example: java@123, o/p letter-4, digit-3,special-1
 
-word = 'java@123'
-result = [0,0,0]
+# word = 'java@123'
+# result = [0,0,0]
 
-"""wd = "a1"
-re =[0]
+# """wd = "a1"
+# re =[0]
 
-for i in wd:
-    if i.isalnum():
-        re[-1] +=1   # special function called alpha and num
+# for i in wd:
+#     if i.isalnum():
+#         re[-1] +=1   # special function called alpha and num
 
-print(re)"""
+# print(re)"""
 
 
-for i in word:
-    if i.isdigit():
-        result[0] +=1
-    elif i.isalpha():
-        result[1] += 1
-    else:
-        result[2] +=1
+# for i in word:
+#     if i.isdigit():
+#         result[0] +=1
+#     elif i.isalpha():
+#         result[1] += 1
+#     else:
+#         result[2] +=1
 
-print(result)
- 
+# print(result)
+
+# check rotation
+# example: abcd, cdab 
+
+string1 = 'abcd'
+string2 = 'cdab'
+left =''
+
+for i in string1 + '':
+    if string1 + left == string2:
+        print(True)
+        quit()
+    left += i
+    string1 = string1[1:]
+print(False)
+
