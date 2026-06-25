@@ -96,43 +96,70 @@
 
     
 
-# find the longest word
-# eg: Java is te powerful languages, -> language
+# # find the longest word
+# # eg: Java is te powerful languages, -> language
 
-# method 1
+# # method 1
 
-stream = 'java is powerful language'
-print(stream.split())  # used to split the word in btw space
+# stream = 'java is powerful language'
+# print(stream.split())  # used to split the word in btw space
+
+# # for i in stream.split():
+# #     print(i,len(i))     # used to find the length
+
+# length = 0
+# result = ""
 
 # for i in stream.split():
-#     print(i,len(i))     # used to find the length
+#     j = len(i)
+#     if j > length:
+#         length =  j
+#         result = i + result
 
-length = 0
-result = ""
-
-for i in stream.split():
-    j = len(i)
-    if j > length:
-        length =  j
-        result = i + result
-
-print(result)
+# print(result)
     
 
-# method 2
+# # method 2
 
-stream = 'Java is a power language'
-largest = currentLength = 0
-result = currentWord = ''
-for i in stream+' ':
-    if i == ' ':
-        if currentLength>largest:
-            result = currentWord
-            largest = currentLength
-        currentWord = ''
-        currentLength = 0
+# stream = 'Java is a power language'
+# largest = currentLength = 0
+# result = currentWord = ''
+# for i in stream+' ':
+#     if i == ' ':
+#         if currentLength>largest:
+#             result = currentWord
+#             largest = currentLength
+#         currentWord = ''
+#         currentLength = 0
+#     else:
+#         currentLength += 1
+#         currentWord += i
+# print(result)
+ 
+
+# count digits, alphabets, and specials characters
+# example: java@123, o/p letter-4, digit-3,special-1
+
+word = 'java@123'
+result = [0,0,0]
+
+"""wd = "a1"
+re =[0]
+
+for i in wd:
+    if i.isalnum():
+        re[-1] +=1   # special function called alpha and num
+
+print(re)"""
+
+
+for i in word:
+    if i.isdigit():
+        result[0] +=1
+    elif i.isalpha():
+        result[1] += 1
     else:
-        currentLength += 1
-        currentWord += i
+        result[2] +=1
+
 print(result)
  
