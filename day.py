@@ -163,18 +163,48 @@
 
 # print(result)
 
-# check rotation
-# example: abcd, cdab 
+# # check rotation
+# # example: abcd, cdab 
 
-string1 = 'abcd'
-string2 = 'cdab'
-left =''
+# string1 = 'abcd'
+# string2 = 'cdab'
+# left =''
 
-for i in string1 + '':
-    if string1 + left == string2:
-        print(True)
-        quit()
-    left += i
-    string1 = string1[1:]
-print(False)
+# for i in string1 + '':
+#     if string1 + left == string2:
+#         print(True)
+#         quit()
+#     left += i
+#     string1 = string1[1:]
+# print(False)
 
+
+# # reverse words in a sentence
+# # eg: java is awesome o/p: awesome is java
+
+# # method 1
+
+# string1 = 'java is awesome'
+# result = ''
+# # print(string1.split())  # o/p : ['java', 'is', 'awesome']
+# # print(string1.split()[::-1])  # o/p : ['awesome', 'is', 'java']
+
+# for i in string1.split()[::-1]:
+#     result += i + " "
+# print(result.strip())  # used to remove extra " " in the last
+# print(result)
+
+# method 2
+
+st1 = "java is awesome"
+current = result = " "
+
+for i in st1+" ":
+    if i == " ":
+        result = " " + current + result
+        current = " "
+    else:
+        current += i
+        
+print(result[1:])
+print(result[0:])
