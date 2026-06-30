@@ -7,8 +7,10 @@
 
 
 
-# square pattern without 2 loops
+# # square pattern without 2 loops
 
-b = int(input("Enter num: "))
-for i in range(b):
-    print("* " *b)
+# b = int(input("Enter num: "))
+# for i in range(b):
+#     print("* " *b)
+
+
