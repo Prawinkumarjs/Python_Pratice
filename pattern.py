@@ -15,19 +15,28 @@
 
 
 
-# hollow square
+# # hollow square method 1
 
-a = int(input("Enter num: "))
+# a = int(input("Enter num: "))
 
-for i in range(a):
-    container = ""
-    for j in range(a):
-        if(j == 0 or j == a-1 or i == 0 or i == a-1):
-            container += '*_'
+# for i in range(a):
+#     container = ""
+#     for j in range(a):
+#         if(j == 0 or j == a-1 or i == 0 or i == a-1):
+#             container += '*_'
            
-        else:
-            container += '  '
+#         else:
+#             container += '  '
            
-    print(container[:-1])
+#     print(container[:-1])
 
+#  hollow square method 2 without 2 loop
 
+row = int(input("Enter row: "))
+
+for i in range(1,row+1):
+    if i==1 or i==row:
+        print(('* '*row).strip())
+    else:
+        print('* '+'  '*(row-2)+'*')
+ 
