@@ -49,15 +49,24 @@
 #         print("* ", end=" ")
 #     print()
 
-# left triangle with container
+# # left triangle with container
+
+# a = int(input("Enter num: "))
+
+# for i in range(a):
+#     container = ""
+#     for j in range(i+1):
+#         container += "*_"
+#     print(container[:-1])
+
+
+# left triangle with container without 2 loops
 
 a = int(input("Enter num: "))
 
-for i in range(a):
-    container = ""
-    for j in range(i+1):
-        container += "*_"
-    print(container[:-1])
+for i in range(1,a+1):
+    print(("* "*i).strip())
+    
 
 
  
