@@ -30,13 +30,23 @@
            
 #     print(container[:-1])
 
-#  hollow square method 2 without 2 loop
+# #  hollow square method 2 without 2 loop
 
-row = int(input("Enter row: "))
+# row = int(input("Enter row: "))
 
-for i in range(1,row+1):
-    if i==1 or i==row:
-        print(('* '*row).strip())
-    else:
-        print('* '+'  '*(row-2)+'*')
+# for i in range(1,row+1):
+#     if i==1 or i==row:
+#         print(('* '*row).strip())
+#     else:
+#         print('* '+'  '*(row-2)+'*')
+
+
+# left triangle
+
+a = int(input('Enter num: '))
+for i in range(a):
+    for j in range(i+1):
+        print("* ", end=" ")
+    print()
+
  
