@@ -39,32 +39,47 @@
 
 # print(team)
 
-# largest palindrome in a string
+# # largest palindrome in a string
 
-word = "aaababbcddd"
-res = once = ''
-freq = {}
+# word = "aaababbcddd"
+# res = once = ''
+# freq = {}
 
-for i in word:
-    if i in freq:
-        freq[i]+=1
-    else:
-        freq[i] = 1
-print(freq)
-sortedfreq = sorted(freq,key=lambda x:freq[x])
-print(sortedfreq)
+# for i in word:
+#     if i in freq:
+#         freq[i]+=1
+#     else:
+#         freq[i] = 1
+# print(freq)
+# sortedfreq = sorted(freq,key=lambda x:freq[x])
+# print(sortedfreq)
 
-for i in sortedfreq[::-1]:
-    frequency = freq[i]
-    half = frequency//2
-    if frequency % 2 and not once:
-        res += i*half
-        once = i
-    elif frequency > 1:
-        res += i*half
+# for i in sortedfreq[::-1]:
+#     frequency = freq[i]
+#     half = frequency//2
+#     if frequency % 2 and not once:
+#         res += i*half
+#         once = i
+#     elif frequency > 1:
+#         res += i*half
     
-largestpalindrome = res + once + res[::-1]
-print(largestpalindrome)
-print(largestpalindrome==largestpalindrome)
+# largestpalindrome = res + once + res[::-1]
+# print(largestpalindrome)
+# print(largestpalindrome==largestpalindrome)
 
     
+# word pattern: pattern = 'abba', sentence = ' dog cat cat dog'
+
+pattern = 'abba'
+sentence = 'dog cat cat dog'
+word = sentence.split()
+stream = {}
+
+for i in range(len(pattern)):
+    currentword, currentmatch = pattern[i],word[i]
+    if currentword in stream and stream[currentword]!= currentmatch:
+        print(False)
+        quit()
+    stream[currentword]=currentmatch
+print(True)
+print(stream)
