@@ -24,17 +24,47 @@
 # print(sorted(freq,key=lambda x:freq[x]))
 
 
-# grouping 
-# ex: {john:21, maru:20,alice:21,joe:20}
-# o/p: {20:[joe,maru],21:[john,alice]}
+# # grouping 
+# # ex: {john:21, maru:20,alice:21,joe:20}
+# # o/p: {20:[joe,maru],21:[john,alice]}
 
-pupils = {"johnny":21,"sethu":22,"dani":22,"yuvaraj":21}
-team = {}
+# pupils = {"johnny":21,"sethu":22,"dani":22,"yuvaraj":21}
+# team = {}
 
-for i in pupils:
-    if pupils[i] in team:
-        team[pupils[i]].append(i)
+# for i in pupils:
+#     if pupils[i] in team:
+#         team[pupils[i]].append(i)
+#     else:
+#         team[pupils[i]] = [i]
+
+# print(team)
+
+# largest palindrome in a string
+
+word = "aaababbcddd"
+res = once = ''
+freq = {}
+
+for i in word:
+    if i in freq:
+        freq[i]+=1
     else:
-        team[pupils[i]] = [i]
+        freq[i] = 1
+print(freq)
+sortedfreq = sorted(freq,key=lambda x:freq[x])
+print(sortedfreq)
 
-print(team)
+for i in sortedfreq[::-1]:
+    frequency = freq[i]
+    half = frequency//2
+    if frequency % 2 and not once:
+        res += i*half
+        once = i
+    elif frequency > 1:
+        res += i*half
+    
+largestpalindrome = res + once + res[::-1]
+print(largestpalindrome)
+print(largestpalindrome==largestpalindrome)
+
+    
