@@ -60,13 +60,21 @@
 #     print(container[:-1])
 
 
-# left triangle with container without 2 loops
+# # left triangle with container without 2 loops
 
-a = int(input("Enter num: "))
+# a = int(input("Enter num: "))
 
-for i in range(1,a+1):
-    print(("* "*i).strip())
+# for i in range(1,a+1):
+#     print(("* "*i).strip())
     
 
 
- 
+# left hollow triangle 
+a = int(input('enter num: '))
+for i in range(1,a+1):
+    if(i == 1 or i == a ):
+        print('*  '*i)
+    else:
+        print('*  ' + '   '*(i-2) + '*')  
+   
+
