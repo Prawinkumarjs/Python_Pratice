@@ -41,7 +41,7 @@
 #         print('* '+'  '*(row-2)+'*')
 
 
-# # left triangle without container
+# # right triangle without container
 
 # a = int(input('Enter num: '))
 # for i in range(a):
@@ -49,7 +49,7 @@
 #         print("* ", end=" ")
 #     print()
 
-# # left triangle with container
+# # right triangle with container
 
 # a = int(input("Enter num: "))
 
@@ -60,7 +60,7 @@
 #     print(container[:-1])
 
 
-# # left triangle with container without 2 loops
+# # right triangle with container without 2 loops
 
 # a = int(input("Enter num: "))
 
@@ -69,12 +69,10 @@
     
 
 
-# left hollow triangle 
-a = int(input('enter num: '))
-for i in range(1,a+1):
-    if(i == 1 or i == a ):
-        print('*  '*i)
-    else:
-        print('*  ' + '   '*(i-2) + '*')  
-   
-
+# # right hollow triangle 
+# a = int(input('enter num: '))
+# for i in range(1,a+1):
+#     if(i == 1 or i == a ):
+#         print('*  '*i)
+#     else:
+#         print('*  ' + '   '*(i-2) + '*')  
