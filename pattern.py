@@ -76,3 +76,11 @@
 #         print('*  '*i)
 #     else:
 #         print('*  ' + '   '*(i-2) + '*')  
+
+
+# right inverted triangle
+
+a = int(input("Enter num: "))
+
+for i in range(a):
+    print(("* " * (a-i*1)).strip())
