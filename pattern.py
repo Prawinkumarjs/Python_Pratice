@@ -70,6 +70,13 @@
 
 
 # # right hollow triangle 
+
+# # *  
+# # *  *
+# # *     *
+# # *        *
+# # *  *  *  *  * 
+
 # a = int(input('enter num: '))
 # for i in range(1,a+1):
 #     if(i == 1 or i == a ):
@@ -77,10 +84,55 @@
 #     else:
 #         print('*  ' + '   '*(i-2) + '*')  
 
+# # left triangle
 
-# right inverted triangle
+# #           * 
+# #         * * 
+# #       * * * 
+# #     * * * * 
+# #   * * * * * 
 
-a = int(input("Enter num: "))
+# a = int(input('enter num: '))
 
-for i in range(a):
-    print(("* " * (a-i*1)).strip())
+# for i in range(a):
+#     print("  " * (a-i) + "* " * (i+1) )
+
+
+# # hollow left triangle
+# b = int(input('Enter num: '))
+# for i in range(b):
+#     if(i == 1 or i == a ):
+#         print('  *'*i)
+#     else:
+#         print('  '*(b-i) + '* '*(i+1) ) 
+
+
+
+# # right inverted triangle
+
+# # * * * * *
+# # * * * *
+# # * * *
+# # * *
+# # *
+
+# a = int(input("Enter num: "))
+
+# for i in range(a):
+#     print(("* " * (a-i*1)).strip())
+
+
+# # right inverted hollow triangle
+
+# # * * * * * 
+# # *     *
+# # *   *
+# # * *
+# # * 
+
+# a = int(input('enter num: '))
+# for i in range(a,0,-1):
+#     if i == 1 or i == a:
+#         print("* " * i)
+#     else:
+#         print('* ' + "  " * (i-2) + '*')
