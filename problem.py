@@ -128,43 +128,43 @@ word = ['car','can','lid']
 
 
 
-# equal score strings
-# dbb = 8 ; d = 4 == 4 = bb(2)
-# abcd = 10 ; ab = 3 != 7 = cd(3,4) 
+# # equal score strings
+# # dbb = 8 ; d = 4 == 4 = bb(2)
+# # abcd = 10 ; ab = 3 != 7 = cd(3,4) 
 
-strings = 'dbbe'
-stream = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26}
+# strings = 'dbbe'
+# stream = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26}
 
-right = left = 0
+# right = left = 0
 
-for i in strings:
-    right += stream[i]
+# for i in strings:
+#     right += stream[i]
     
 
-for j in strings:
-    value = stream[j]
-    left += value
-    right -= value
+# for j in strings:
+#     value = stream[j]
+#     left += value
+#     right -= value
 
-    if left == right:
-        print(True)
-        break
+#     if left == right:
+#         print(True)
+#         break
 
-else:
-    print(False)
+# else:
+#     print(False)
 
 
-# method 2
-strings = 'dbb'
-j=[]
-for i in strings:
-    j.append((ord(i)-ord("a"))+1)
-l=[]
-for k in j:
-    l.append(j[0])
-    j.pop(0)
-    if(sum(j)==sum(l)):
-        print("True")
-        break
-else:
-    print("False")
+# # method 2
+# strings = 'dbb'
+# j=[]
+# for i in strings:
+#     j.append((ord(i)-ord("a"))+1)
+# l=[]
+# for k in j:
+#     l.append(j[0])
+#     j.pop(0)
+#     if(sum(j)==sum(l)):
+#         print("True")
+#         break
+# else:
+#     print("False")
