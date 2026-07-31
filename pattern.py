@@ -1,4 +1,12 @@
 # # square pattern
+
+# # * * * * * * 
+# # * * * * * * 
+# # * * * * * * 
+# # * * * * * * 
+# # * * * * * * 
+# # * * * * * * 
+
 # a = int(input("Enter the Number: "))
 # for i in range(a):
 #     for j in range(a):
@@ -16,6 +24,13 @@
 
 
 # # hollow square method 1
+
+# # *_*_*_*_*_*
+# # *_        *
+# # *_        *
+# # *_        *
+# # *_        *
+# # *_*_*_*_*_*
 
 # a = int(input("Enter num: "))
 
@@ -41,7 +56,14 @@
 #         print('* '+'  '*(row-2)+'*')
 
 
-# # right triangle without container
+# # left triangle without container
+
+# # *  
+# # *  *  
+# # *  *  *  
+# # *  *  *  *  
+# # *  *  *  *  *  
+# # *  *  *  *  *  *  
 
 # a = int(input('Enter num: '))
 # for i in range(a):
@@ -49,7 +71,7 @@
 #         print("* ", end=" ")
 #     print()
 
-# # right triangle with container
+# # left triangle with container
 
 # a = int(input("Enter num: "))
 
@@ -60,7 +82,7 @@
 #     print(container[:-1])
 
 
-# # right triangle with container without 2 loops
+# # left triangle with container without 2 loops
 
 # a = int(input("Enter num: "))
 
@@ -69,7 +91,7 @@
     
 
 
-# # right hollow triangle 
+# # left hollow triangle 
 
 # # *  
 # # *  *
@@ -84,7 +106,7 @@
 #     else:
 #         print('*  ' + '   '*(i-2) + '*')  
 
-# # left triangle
+# # right triangle
 
 # #           * 
 # #         * * 
@@ -98,7 +120,7 @@
 #     print("  " * (a-i) + "* " * (i+1) )
 
 
-# # hollow left triangle
+# # hollow right triangle
 # b = int(input('Enter num: '))
 # for i in range(b):
 #     if(i == 1 or i == a ):
@@ -108,7 +130,7 @@
 
 
 
-# # right inverted triangle
+# # left inverted triangle
 
 # # * * * * *
 # # * * * *
@@ -122,7 +144,7 @@
 #     print(("* " * (a-i*1)).strip())
 
 
-# # right inverted hollow triangle
+# # left inverted hollow triangle
 
 # # * * * * * 
 # # *     *
@@ -136,3 +158,16 @@
 #         print("* " * i)
 #     else:
 #         print('* ' + "  " * (i-2) + '*')
+
+# # right inverted triangle
+
+# # * * * * * * 
+# #   * * * * * 
+# #     * * * * 
+# #       * * * 
+# #         * * 
+# #           * 
+
+# a = int(input("Enter Num: "))
+# for i in range(a):
+#     print("  " * i + ("* " * (a-i)).strip())
