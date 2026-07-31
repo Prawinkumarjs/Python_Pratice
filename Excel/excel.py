@@ -4,6 +4,7 @@ from openpyxl import*
 from openpyxl.worksheet.table import Table,TableStyleInfo
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.comments import Comment
 path = r"Excel\excel.xlsx"
 if not os.path.exists(path):
     workBook = Workbook()
@@ -70,4 +71,8 @@ print(workBook.active)
 # for i in workSheet.iter_rows():
 #     print(i[0].value,i[1].value,i[2].value)
 
+# for adding comment in the excel
+workSheet['F2'].comment = Comment(text='This is a comment',author='Prawin')
+
 workBook.save(path)
+workBook.close()
