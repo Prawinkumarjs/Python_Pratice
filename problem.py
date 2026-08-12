@@ -116,33 +116,33 @@
 # print(result)
 
     
-# form words in diagonal flow
+# # form words in diagonal flow
 
-# words = ['car','can','lid']
-# c a r
-# c a n
-# l i d
-# o/p = ['c','ca','ral','in','d']
+# # words = ['car','can','lid']
+# # c a r
+# # c a n
+# # l i d
+# # o/p = ['c','ca','ral','in','d']
 
-words = ['car','can','dad','python']
-largest = None
-for i in words:
-    currentLength = len(i)
-    if largest==None or currentLength>largest:largest=currentLength
-words = [x+' '*(largest-len(x)) for x in words]
-result = []
-index = reverse = 1
-for i in words:
-    if not result:result = list(i)
-    else:
-        for x in range(largest-1):
-            if reverse:result[index+x] = i[x]+result[index+x]
-            else:result[index+x] += i[x]
-            reverse = not reverse
-        if largest%2:reverse = not reverse
-        result.append(i[-1])
-        index += 1
-print(result)
+# words = ['car','can','dad','python']
+# largest = None
+# for i in words:
+#     currentLength = len(i)
+#     if largest==None or currentLength>largest:largest=currentLength
+# words = [x+' '*(largest-len(x)) for x in words]
+# result = []
+# index = reverse = 1
+# for i in words:
+#     if not result:result = list(i)
+#     else:
+#         for x in range(largest-1):
+#             if reverse:result[index+x] = i[x]+result[index+x]
+#             else:result[index+x] += i[x]
+#             reverse = not reverse
+#         if largest%2:reverse = not reverse
+#         result.append(i[-1])
+#         index += 1
+# print(result)
  
 
 
@@ -187,3 +187,20 @@ print(result)
 #         break
 # else:
 #     print("False")
+
+
+# Zigzag Conversion
+# string = 'PAYPALISHIRING'
+# op: 'PAHNAPLSIIGYIR'
+string = 'PAYPALISHIRING'
+row = 3
+stream = [''] * row
+index = rev = 0
+for x in string :
+    stream[index] += x
+    if index == 0: 
+        rev = 0
+    elif index == row -1:
+        rev = 1
+    index += -1 if rev else 1
+print(''.join(stream))
