@@ -171,3 +171,17 @@
 # a = int(input("Enter Num: "))
 # for i in range(a):
 #     print("  " * i + ("* " * (a-i)).strip())
+
+# right hollow triangle
+# * * * * * 
+#   *     * 
+#     *   * 
+#       * * 
+#         * 
+
+a = int(input("Enter Num: "))
+for i in range(a):
+    if i == 0 or i == a-1:
+        print('  ' * i + "* " * (a-i))
+    else:
+        print("  " * i + '* ' + "  " * (a-i-2) + "* ")
