@@ -172,16 +172,46 @@
 # for i in range(a):
 #     print("  " * i + ("* " * (a-i)).strip())
 
-# right hollow triangle
-# * * * * * 
-#   *     * 
-#     *   * 
-#       * * 
+# # right hollow triangle
+# # * * * * * 
+# #   *     * 
+# #     *   * 
+# #       * * 
+# #         * 
+
+# a = int(input("Enter Num: "))
+# for i in range(a):
+#     if i == 0 or i == a-1:
+#         print('  ' * i + "* " * (a-i))
+#     else:
+#         print("  " * i + '* ' + "  " * (a-i-2) + "* ")
+
+# Pyramid 
+#         * 
+#       * * * 
+#     * * * * * 
+#   * * * * * * * 
+# * * * * * * * * * 
+a = int(input("Enter num: "))
+for i in range(a):
+    print("  " *(a-i-1) + "* " * (i * 2 + 1))
+
+
+# diamond
+#         * 
+#       * * * 
+#     * * * * * 
+#   * * * * * * * 
+# * * * * * * * * * 
+#   * * * * * * * 
+#     * * * * * 
+#       * * * 
 #         * 
 
-a = int(input("Enter Num: "))
+a = int(input("Enter num: "))
 for i in range(a):
-    if i == 0 or i == a-1:
-        print('  ' * i + "* " * (a-i))
-    else:
-        print("  " * i + '* ' + "  " * (a-i-2) + "* ")
+    print("  " *(a-i-1) + "* " * (i * 2 + 1))
+for j in range(1,a):
+    print("  " * j + "* " * (a - j) + "* " *(a - j - 1))
+
+
