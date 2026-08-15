@@ -214,6 +214,13 @@
 # for j in range(1,a):
 #     print("  " * j + "* " * (a - j) + "* " *(a - j - 1))
 
+# diamond method 2
+
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     print("  " * (a-i-1) + "* " * (i*2+1))
+# for j in range(1,a):
+#     print("  " * (j) + "* " * ((a*2-1) - j*2))
 
 # # hollow pyramid
 # #         * 
@@ -227,3 +234,99 @@
 #         print("  " *(a-i-1) + "* " * (i * 2 + 1))
 #     else:
 #         print("  " *(a-i-1) + "* " + "  " *(i*2-1) + "* " )
+
+# # inverted pyramid
+# # * * * * * * * * * 
+# #   * * * * * * * 
+# #     * * * * * 
+# #       * * * 
+# #         * 
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     print( "  " * (i) + "* " * (((a*2-1)-(i*2))))
+
+# # inverted hollow pyramid
+# # * * * * * * * * * 
+# #   *           * 
+# #     *       * 
+# #       *   * 
+# #         * 
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     if i == 0 or i == a-1:
+#         print("  " * i + "* " *((a*2-1)-i*2))
+#     else:
+#         print("  " * i + "* " + "  " * ((a*2-1) - ((i*2)+2)) + "* ")
+
+# # hollow diamond
+# #         * 
+# #       *   * 
+# #     *       * 
+# #   *           * 
+# # *               * 
+# #   *           * 
+# #     *       * 
+# #       *   * 
+# #         * 
+
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     if i == 0:
+#         print("  " * (a-i-1) + "* " * (i*2+1))
+#     else:
+#         print("  " * (a-1-i) + "* " + "  " * (i*2-1) + "* ")
+# for j in range(1,a):
+#     if j == a-1:
+#         print("  " *j + "* " * ((a*2-1)-(j*2)))
+#     else:
+#         print("  " * j + "* " + "  " * ((a*2-3)-(j*2)) + "* ")
+
+# # parallelogram
+# # * * * * * 
+# #   * * * * * 
+# #     * * * * * 
+# #       * * * * * 
+# #         * * * * * 
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     print("  " * i + "* " * a)
+
+# # hollow parallelogram
+# # * * * * * 
+# #   *       * 
+# #     *       * 
+# #       *       * 
+# #         * * * * * 
+
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     if i == 0 or i == a-1:
+#         print("  " * i + "* " * a)
+#     else:
+#         print("  " * i + "* " + "  " * (a-2) + "* ")
+
+# # inverted parallelogram
+# #         * * * * * 
+# #       * * * * * 
+# #     * * * * * 
+# #   * * * * * 
+# # * * * * * 
+
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     print("  " * (a-i-1) + "* " * a)
+
+# inverted hollow parallelogram
+#         * * * * * 
+#       *       * 
+#     *       * 
+#   *       * 
+# * * * * * 
+
+a = int(input("Enter num: "))
+for i in range(a):
+    if i == 0 or i == a-1:
+        print("  " * (a-1-i) + "* " * a)
+    else:
+        print("  " * (a-1-i) + "* " + "  " * (a-2) + "* ")
+

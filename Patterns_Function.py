@@ -169,4 +169,3 @@ def invertedhollowparallelogram():
         else:
             print("  " * (a-1-i) + "* " + "  " * (a-2) + "* ")
 
-invertedhollowparallelogram()
