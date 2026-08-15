@@ -186,32 +186,44 @@
 #     else:
 #         print("  " * i + '* ' + "  " * (a-i-2) + "* ")
 
-# Pyramid 
+# # Pyramid 
+# #         * 
+# #       * * * 
+# #     * * * * * 
+# #   * * * * * * * 
+# # * * * * * * * * * 
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     print("  " *(a-i-1) + "* " * (i * 2 + 1))
+
+
+# # diamond
+# #         * 
+# #       * * * 
+# #     * * * * * 
+# #   * * * * * * * 
+# # * * * * * * * * * 
+# #   * * * * * * * 
+# #     * * * * * 
+# #       * * * 
+# #         * 
+
+# a = int(input("Enter num: "))
+# for i in range(a):
+#     print("  " *(a-i-1) + "* " * (i * 2 + 1))
+# for j in range(1,a):
+#     print("  " * j + "* " * (a - j) + "* " *(a - j - 1))
+
+
+# hollow pyramid
 #         * 
-#       * * * 
-#     * * * * * 
-#   * * * * * * * 
+#       *   * 
+#     *       * 
+#   *           * 
 # * * * * * * * * * 
 a = int(input("Enter num: "))
 for i in range(a):
-    print("  " *(a-i-1) + "* " * (i * 2 + 1))
-
-
-# diamond
-#         * 
-#       * * * 
-#     * * * * * 
-#   * * * * * * * 
-# * * * * * * * * * 
-#   * * * * * * * 
-#     * * * * * 
-#       * * * 
-#         * 
-
-a = int(input("Enter num: "))
-for i in range(a):
-    print("  " *(a-i-1) + "* " * (i * 2 + 1))
-for j in range(1,a):
-    print("  " * j + "* " * (a - j) + "* " *(a - j - 1))
-
-
+    if(i == 0 or i == a-1):
+        print("  " *(a-i-1) + "* " * (i * 2 + 1))
+    else:
+        print("  " *(a-i-1) + "* " + "  " *(i*2-1) + "* " )
