@@ -41,3 +41,26 @@ print(formatdate)
 
 # date or time calculation for particular 
 print(formatdate-datetime.now())
+
+# date or time calculation for particular days only
+print((formatdate-datetime.now()).days , " naal na naa ooruku poren")
+
+# auto update of the date
+print(today+timedelta(1))
+print(today+timedelta(-1))
+
+# replace the time
+noww = today.replace(2003,12,3)
+print(noww)
+
+# calculation of today's and tommrow
+todays = datetime.now()
+tommorows = todays + timedelta(1)
+tommorows = tommorows.replace(hour=0, minute=0, second=0, microsecond=0)
+difference = tommorows-todays
+print(difference)
+
+# time zone for tokyo
+timeZones = ZoneInfo("Asia/Tokyo")
+tokyonow = datetime.now(tz=timeZones)
+print(tokyonow)
