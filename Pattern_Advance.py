@@ -34,17 +34,20 @@ def xpattern():
     for j in range(1,a):
             print("  " * (a-j-1) + "* " + "  " * (j*2-1) + "* " )
 
+            
 
-# xpattern()
 
-# def srixpattern():
-#     a = int(input("Enter num: "))
-#     for i in range(a):
-#         for j in range(a):
-#             if i==j and i+j==a:
-#                 print("* ")
-#             else:
-#                 print("  ")
+xpattern()
 
-# srixpattern()
+def srixpattern():
+    a = int(input("Enter num: "))
+    for i in range(a):
+        for j in range(a):
+            if i==j or i+j==a-1:
+                print("* ",end="")
+            else:
+                print("  ",end="")
+        print()
+
+srixpattern()
 

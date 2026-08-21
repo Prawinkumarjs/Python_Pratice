@@ -189,18 +189,44 @@
 #     print("False")
 
 
-# Zigzag Conversion
+# # Zigzag Conversion
+# # string = 'PAYPALISHIRING'
+# # op: 'PAHNAPLSIIGYIR'
 # string = 'PAYPALISHIRING'
-# op: 'PAHNAPLSIIGYIR'
-string = 'PAYPALISHIRING'
-row = 3
-stream = [''] * row
-index = rev = 0
-for x in string :
-    stream[index] += x
-    if index == 0: 
-        rev = 0
-    elif index == row -1:
-        rev = 1
-    index += -1 if rev else 1
-print(''.join(stream))
+# row = 3
+# stream = [''] * row
+# index = rev = 0
+# for x in string :
+#     stream[index] += x
+#     if index == 0: 
+#         rev = 0
+#     elif index == row -1:
+#         rev = 1
+#     index += -1 if rev else 1
+# print(''.join(stream))
+
+
+# bodmas rule(similar)
+# i/p = "2*((4-3)*4)"
+# o/p = "8"
+# i/p = "2*4-3"
+# o/p = 5
+
+a = '2*((4-3)*4)'
+stack = []
+op = []
+
+for i in a:
+    if i == "+" or i == "-" or i == "*" or i == "/":
+        op.append(i)
+    elif i == ')':
+        index = 0
+        for j in range(len(stack),0,-1):
+            stack.pop()
+
+    else:
+        stack.append(i) 
+
+
+print(op)
+print(stack)
